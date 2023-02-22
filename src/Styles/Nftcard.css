@@ -1,0 +1,193 @@
+.card {
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right,#5a04a0,#99038d);
+    border-radius: 8px 8px 0px 0px;
+    padding: 16px;
+  }
+  
+  .header-left {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;
+  }
+
+  .header-right p{
+    color: white;
+  }
+  
+  .congrats {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .details-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 17px;
+  }
+  
+  .left-details img {
+    max-width: 80px;
+  }
+  
+  .right-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;
+  }
+  
+  .warranty-no,
+  .valid-until {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .warranty-no p{
+    margin: 0;
+    font-size:90%;
+  }
+
+  .valid-until p{
+    margin: 0;
+    font-size:82.2%
+  }
+
+  .vehicle-details {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 0px;
+  }
+  
+  .headingg {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 6px;
+  }
+  
+  .type-regno{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .label {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-right: 8px;
+    margin: 4px;
+  }
+  
+  .value {
+    font-size: 15px;
+    margin: 4px;
+  }
+  
+  .type-details li {
+    margin-bottom: 8px;
+  }
+  
+  .points {
+    margin-bottom: 0px;
+  }
+  
+  .points ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .points li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: grey;
+    font-weight:600;
+  }
+  
+  .continue-button {
+    background-color: darkcyan;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0px 0px 8px 8px;
+    padding: 16px;
+    cursor: pointer;
+  }
+  
+
+  .after-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: bolder;
+    font-size: 130%;
+  }
+
+  .text-here{
+    margin: 3%;
+  }
+
+  .label-value{
+    margin-top: 0.5%;
+  }
+
+  .follow p{
+    margin-bottom: 2%;
+    font-size: 80%;
+    font-weight:bolder;
+    color: grey;
+  }
+
+  .points ol{
+    margin: 0;
+  }
+
+  .label-value .label{
+    color: grey;
+  }
+
+  .label-value .value{
+    font-weight: bold;
+  }
