@@ -17,7 +17,7 @@ export default function Mintbills() {
         <h2>Mint your NFT</h2>
         <div className="mint-form">
           <div className="left-form">
-            <p style={{ fontSize: "40px", margin: "11px", fontWeight: "bold" }}>
+            <p style={{ fontSize: "27px", margin: "11px", fontWeight: "bold" }}>
               Upload
             </p>
             <div className="uploado">
@@ -71,11 +71,11 @@ export default function Mintbills() {
               <label htmlFor="title">Title:</label>
               <input type="text" id="title" />
             </div>
-            <div className="form-input">
+            <div className="form-input" style= {{marginBottom:"5px",marginTop:"15px"}}>
               <label htmlFor="description">Description:</label>
               <textarea id="description"></textarea>
             </div>
-            <div className="form-input">
+            <div className="form-input" style= {{marginBottom:"5px"}}>
               <p>NFT Type:</p>
               <div className="checkbox-box">
                 <label>
@@ -107,7 +107,7 @@ export default function Mintbills() {
           </div>
         </div>
         <div className="concluding-text">
-          <p>
+          <p style={{marginTop:"0%"}}>
             By minting this NFT, you certify that you are the rightful owner of
             the content and have the legal right to mint and sell it as an NFT.
           </p>

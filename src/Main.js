@@ -7,8 +7,8 @@ import Nftcard from './components/Nftcard'
 export default function Main() {
   return (
     <div>
-      <Home/>
-      {/* <Mintbills/> */}
+      {/* <Home/> */}
+      <Mintbills/>
       {/* <Nftcard/>  */}
     </div>
   )
