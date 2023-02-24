@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <div>
       <Home/>
-      {/* <Mintbills/>*/}
+      {/* <Mintbills/> */}
       {/* <Nftcard/>  */}
     </div>
   )

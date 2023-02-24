@@ -1,0 +1,623 @@
+/* Page styles */
+
+body {
+    margin: 0;
+    background-color: #252954;
+    background-color: #1F1D2B;
+  
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-container::before {
+    content: "";
+    position: absolute;
+    width: 159px;
+    height: 159px;
+    left: 79%;
+    top: 600px;
+    filter: blur(90px);
+    background-color: #FB37FF;
+  }
+  
+  .mint-box::before {
+    content: "";
+    position: absolute;
+    width: 159px;
+    height: 159px;
+    right: 79%;
+    top: 600px;
+    filter: blur(90px);
+    background-color: #FB37FF;
+  }
+  
+  .page-container::after {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: 80%;
+    top: 550px;
+    background-color: #18B2DE;
+    filter: blur(80px);
+  }
+  
+  .mint-box::after {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    right: 80%;
+    top: 550px;
+    background-color: #18B2DE;
+    filter: blur(80px);
+  }
+  
+  /* Top rectangle styles */
+  .top-rectanglee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .top-rectanglee h1 {
+    font-size: 48px;
+    font-weight: bold;
+  
+    background: linear-gradient(93.51deg, white 34.84%, #3081ED 82.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 71px;
+  }
+  
+  .top-rectanglee p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Mint box styles */
+  .mint-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 32px;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    margin-top: -100px;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3da5d9;
+    height: 120px;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-right: 32px;
+  }
+  
+  .header p {
+    font-size: 24px;
+    color: white;
+  }
+  
+  /* Mint box styles */
+  .mint-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -55px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mint-box h2 {
+    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+  
+  .uploado {
+    display: flex;
+  }
+  
+  /* Mint form styles */
+  .mint-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .left-form,
+  .right-form {
+    width: 45%;
+    margin: 16px;
+  }
+  
+  .left-form p,
+  .right-form p {
+    /* COLOR: #FB37FF; */
+    /* color: rgb(24, 178, 222); */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .upload-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: center;
+    /* margin-top: 10%; */
+  }
+  
+  .upload-box input[type="file"] {
+    margin-right: 16px;
+  }
+  
+  .upload-box button {
+    background-color: #4c4c4c;
+    color: white;
+    color: #18B2DE;
+    background-color: #1F1D2B;
+    font-weight: 700;
+    padding: 5px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    max-width: 22%;
+    margin: 4%;
+  }
+  
+  .upload-box button:hover {
+    transform: scale(1.05);
+  }
+  
+  .checkbox-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 6%;
+    margin-top: 4%;
+  
+  }
+  
+  .checkbox-box label {
+    margin-right: 16px;
+  }
+  
+  /* Form input styles */
+  .form-input {
+    margin-bottom: 16px;
+    display: flex;
+  }
+  
+  .form-input label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    /* COLOR: #FB37FF; */
+    /* color: rgb(24, 178, 222); */
+  }
+  
+  .form-input input,
+  .form-input textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #4c4c4c;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .form-input input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .form-input input[type="date"] {
+    /* width: 50px; */
+    margin-left: 8%;
+    height: 40px;
+    margin-top: 22px;
+  }
+  
+  /* Concluding text styles */
+  .concluding-text {
+    margin-top: 32px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Mint button styles */
+  .mint-button {
+    width: 100%;
+    height: 64px;
+    margin-top: 32px;
+    background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  .mint-button:hover {
+    background: linear-gradient(93.51deg, #9B51E0 21.84%, #3081ED 99.18%);
+    border-bottom: 1.5px solid #9B51E0;
+    transform: scale(1.01);
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 768px) {
+    .header {
+      height: 80px;
+    }
+  
+    .header h1 {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+  
+    .header p {
+      font-size: 14px;
+    }
+  
+    .mint-box {
+      width: 95%;
+      padding: 12px;
+      margin-top: 8px;
+    }
+  
+    .mint-box h2 {
+      font-size: 20px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 250px;
+    }
+  
+    .form-input label {
+      font-size: 16px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 14px;
+    }
+  
+    .mint-button {
+      font-size: 16px;
+      height: 40px;
+    }
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 480px) {
+    .header {
+      height: 60px;
+    }
+  
+    .header h1 {
+      font-size: 20px;
+      margin-right: 4px;
+    }
+  
+    .header p {
+      font-size: 12px;
+    }
+  
+    .mint-box {
+      width: 90%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+  
+    .mint-box h2 {
+      font-size: 16px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 200px;
+    }
+  
+    .form-input label {
+      font-size: 14px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 12px;
+    }
+  
+    .mint-button {
+      font-size: 14px;
+      height: 36px;
+    }
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 320px) {
+    .header {
+      height: 50px;
+    }
+  
+    .header h1 {
+      font-size: 18px;
+      margin-right: 4px;
+    }
+  
+    .header p {
+      font-size: 10px;
+    }
+  
+    .mint-box {
+      width: 85%;
+      padding: 6px;
+      margin-top: 2px;
+    }
+  
+    .mint-box h2 {
+      font-size: 14px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 150px;
+    }
+  
+    .form-input label {
+      font-size: 12px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 10px;
+    }
+  
+    .mint-button {
+      font-size: 12px;
+      height: 32px;
+    }
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 280px) {
+    .header {
+      height: 40px;
+    }
+  
+    .header h1 {
+      font-size: 16px;
+      margin-right: 2px;
+    }
+  
+    .header p {
+      font-size: 8px;
+    }
+  
+    .mint-box {
+      width: 80%;
+      padding: 4px;
+      margin-top: 2px;
+    }
+  
+    .mint-box h2 {
+      font-size: 12px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 120px;
+    }
+  
+    .form-input label {
+      font-size: 10px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 8px;
+    }
+  
+    .mint-button {
+      font-size: 10px;
+      height: 28px;
+    }
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 240px) {
+    .header {
+      height: 30px;
+    }
+  
+    .header h1 {
+      font-size: 14px;
+      margin-right: 2px;
+    }
+  
+    .header p {
+      font-size: 6px;
+    }
+  
+    .mint-box {
+      width: 75%;
+      padding: 2px;
+      margin-top: 2px;
+    }
+  
+    .mint-box h2 {
+      font-size: 10px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 100px;
+    }
+  
+    .form-input label {
+      font-size: 8px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 6px;
+    }
+  
+    .mint-button {
+      font-size: 8px;
+      height: 24px;
+    }
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 200px) {
+    .header {
+      height: 20px;
+    }
+  
+    .header h1 {
+      font-size: 12px;
+      margin-right: 2px;
+    }
+  
+    .header p {
+      font-size: 4px;
+    }
+  
+    .mint-box {
+      width: 70%;
+      padding: 2px;
+      margin-top: 2px;
+    }
+  
+    .mint-box h2 {
+      font-size: 8px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 80px;
+    }
+  
+    .form-input label {
+      font-size: 6px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 4px;
+    }
+  
+    .mint-button {
+      font-size: 6px;
+      height: 20px;
+    }
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 160px) {
+    .header {
+      height: 16px;
+    }
+  
+    .header h1 {
+      font-size: 10px;
+      margin-right: 2px;
+    }
+  
+    .header p {
+      font-size: 4px;
+    }
+  
+    .mint-box {
+      width: 65%;
+      padding: 2px;
+      margin-top: 2px;
+    }
+  
+    .mint-box h2 {
+      font-size: 6px;
+    }
+  
+    .left-form,
+    .right-form {
+      max-width: 60px;
+    }
+  
+    .form-input label {
+      font-size: 4px;
+    }
+  
+    .form-input input,
+    .form-input textarea {
+      font-size: 2px;
+    }
+  
+    .mint-button {
+      font-size: 4px;
+      height: 16px;
+    }
+  }
+  
+  .terms {
+    max-width: 100%;
+  }
+  
+  .imp {
+    margin-top: 10%;
+  }
+  
+  .top-rectanglee:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 80px;
+    filter: blur(250px);
+    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  }
+  
+  /* background: linear-gradient(93.51deg, white 34.84%, #3081ED 82.18%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px; */
