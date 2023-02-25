@@ -1,9 +1,40 @@
-import React from 'react'
+import {React,useEffect,useState} from 'react'
 import '../Styles/home.css'
 import  "https://use.fontawesome.com/releases/v5.0.13/js/all.js" ;
-
-
+import { connectWallet,
+  getCurrentWalletConnected } from '../util/interact';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 export default function Home() {
+  const [walletAddress, setWallet] = useState("");
+  const [status, setStatus] = useState("");
+  const [nftdata,setNftdata] = useState({
+    
+  })
+  useEffect(() => {
+    const checkwallet =async()=>{
+      const { address, status } = await getCurrentWalletConnected();
+      setWallet(address);
+      setStatus(status);
+  
+    }
+    checkwallet();
+
+   
+  }, []);
+ 
+  const OnconnectWallet =async()=>{
+    const walletResponse = await connectWallet();
+    console.log(walletResponse)
+    setStatus(walletResponse.status);
+    setWallet(walletResponse.address);
+  }
   return (
     
     <div className="landingpage">
@@ -30,11 +61,13 @@ export default function Home() {
         <div className="navlinkwrap">
           <span className="navlink "><a href="#">Home</a></span>
           <span className="navlink"><a href="#">My Nft</a></span>
-          <span className="navlink"><a href="#">Nft Mint</a></span>
+          <span className="navlink"> <Link to="/nft-mint">Nft Mint</Link></span>
           <span className="navlink"><a href="#">How It Works</a></span>
         </div>
         <div className="buttonwrap">
-          <button className="createbtn selectedbtn">Connect Wallet</button>
+          <button className="createbtn selectedbtn" onClick={OnconnectWallet}>{walletAddress==''?"Connect Wallet":(walletAddress.substring(0, 6) +
+          "..." +
+          walletAddress.substring(38))}</button>
         </div>
       </div>
       <div className="box">
@@ -318,6 +351,9 @@ export default function Home() {
       </div>
       <div className="footer">
         <div className="footer-main">
+          <img  src='/about.png'/>
+          
+          <p>
           We are a group of passionate individuals who are dedicated to building
           innovative solutions on the blockchain, with a particular focus on
           non-fungible tokens NFTs. Our team is made up of individuals from
@@ -330,6 +366,7 @@ export default function Home() {
           edge of developments in the industry, and we regularly participate in
           conferences, meetups, and hackathons focused on NFTs and related
           technologies.
+            </p>
         </div>
 
       </div>

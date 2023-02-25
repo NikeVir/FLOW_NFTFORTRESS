@@ -1,8 +1,5 @@
-body {
-    margin: 0;
-    background-color: #252954;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Righteous&family=Roboto&display=swap');
+
   .hidden {
     display: none;
   }
@@ -11,7 +8,6 @@ body {
     margin: 0 auto;
     padding: 0 80px;
     position: relative;
-    max-width: 1100px;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #1F1D2B;
@@ -48,6 +44,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 80px;
+    min-height: 70vh;
   }
   .landingpage .auction {
     margin-top: 100px;
@@ -90,7 +87,7 @@ body {
     width: 126px;
     height: 45px;
     color: #BCBCBC;
-    font-family: "Poppins";
+   font-family: 'Righteous', cursive;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -107,7 +104,7 @@ body {
     background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Poppins";
+    font-family: 'Righteous', cursive;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -117,14 +114,15 @@ body {
     background: linear-gradient(93.51deg, white 34.84%, #3081ED 82.18%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Poppins";
+    font-family: 'Righteous', cursive;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
   }
   
   .navbar .navlink {
-    font-family: "Poppins";
+    font-family: 'Oswald', sans-serif;
+
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -281,6 +279,7 @@ body {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    min-height: 60vh;
   }
   .started-boldtext {
     margin: 0;
@@ -383,12 +382,17 @@ body {
   }
   
   .footer-main {
+    padding: 50px 0;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 40px;
     color: #FFFFFF;
+    display: flex;
+  }
+  .footer-main p{
+    margin-left: 40px;
   }
   .footer-navigate {
     display: flex;
@@ -642,6 +646,7 @@ body {
       max-width: 100%;
       margin-bottom: 50px;
       text-align: center;
+  
     }
   
     .footer-navigate {
@@ -803,4 +808,11 @@ body {
 
 .box .infobox-createbtn:hover {
     background-color: white;
+}
+.footer-main img{
+  width: 500px;
+  max-height: 40vh;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 5px rgba(111, 111, 111, 0.2);
+
 }
