@@ -979,26 +979,6 @@ ul{
 /* End  Responsive */
 
 
-
-/* YT LINK */
-
-
-.youtube {
-  position: fixed;
-  bottom: 40px;
-  right: 70px;
-  text-decoration: none;
-  padding: 8px 12px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 6px;
-  box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.2);
-  color: #fff;
-}
-
-.youtube p {
-  font-size: 22px;
-}
-
 .box{
   display:flex;
 }

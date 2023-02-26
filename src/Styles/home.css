@@ -359,7 +359,7 @@
   }
   .discover-items {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto ;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     justify-content: space-between;
@@ -436,8 +436,8 @@
   .item-img {
     object-fit: cover;
     flex-shrink: 0;
-    width: 200px;
-    height: 220px;
+    width: 345px;
+    height: 314px;
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;

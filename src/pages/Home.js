@@ -1,5 +1,11 @@
 import {React,useEffect,useState} from 'react'
 import '../Styles/home.css'
+import p1 from "./p1.jpg";
+import p2 from "./p2.png";
+import p3 from "./p3.jpg";
+import p4 from "./p4.jpg";
+import p5 from "./p5.jpg";
+import p6 from "./p6.jpg";
 import  "https://use.fontawesome.com/releases/v5.0.13/js/all.js" ;
 import { connectWallet,
   getCurrentWalletConnected } from '../util/interact';
@@ -40,7 +46,7 @@ export default function Home() {
     <div className="landingpage">
       <div className="navbar">
         <a className="navlogo">
-          <span>NFT</span>BILLS
+          <span>NFT</span>FORTRESS
         </a>
 
         <button className="hamburger">
@@ -242,7 +248,20 @@ export default function Home() {
           <div className="item">
             <img
               className="item-img"
-              src="https://i.ibb.co/ZTZz9t0/Erkan-Erdil-Concept-art-of-collosal-dark-scaled-huge-winged-fir-09384960-3c02-48f6-ad40-76d179a7e0a3.png"
+              src={p1}
+              border={0}
+            />
+            <div className="item-title">
+              <p>Lorem Ipsum</p>
+              <p>1.20 Weth</p>
+            </div>
+            <p className="item-date">Ends in 01.34.45</p>
+          </div>
+          
+          <div className="item">
+            <img
+              className="item-img"
+              src={p2}
               alt="unsplash-OG44d93i-NJk"
               border={0}
             />
@@ -255,7 +274,7 @@ export default function Home() {
           <div className="item">
             <img
               className="item-img"
-              src="https://i.ibb.co/SrNRC0b/Erkan-Erdil-angry-soviet-officer-shouting-his-soldiers8k-octane-7b802966-9d4e-4c6e-ac37-d4f751419081.png"
+              src={p3}
               alt="unsplash-OG44d93i-NJk"
               border={0}
             />
@@ -268,19 +287,7 @@ export default function Home() {
           <div className="item">
             <img
               className="item-img"
-              src="https://i.ibb.co/2KsmyYm/m-djoourney.png"
-              border={0}
-            />
-            <div className="item-title">
-              <p>Lorem Ipsum</p>
-              <p>1.20 Weth</p>
-            </div>
-            <p className="item-date">Ends in 01.34.45</p>
-          </div>
-          <div className="item">
-            <img
-              className="item-img"
-              src="https://i.ibb.co/VLfJ41h/MR-ROBOT-two-cyberpunk-cowboys-dueling-6ae4203d-3539-4033-a9d9-80d747ac6498.png"
+              src={p4}
               alt="unsplash-OG44d93i-NJk"
               border={0}
             />
@@ -293,7 +300,7 @@ export default function Home() {
           <div className="item">
             <img
               className="item-img"
-              src="https://i.ibb.co/J5QHZwY/MR-ROBOT-cyberpunk-rose-with-foggy-weather-5eb12baa-e7f6-4c4f-9cba-9654c0de3f51.png"
+              src={p5}
               alt="unsplash-OG44d93i-NJk"
               border={0}
             />
@@ -306,33 +313,7 @@ export default function Home() {
           <div className="item">
             <img
               className="item-img"
-              src="https://i.ibb.co/Trpxy8p/2123.png"
-              alt="unsplash-OG44d93i-NJk"
-              border={0}
-            />
-            <div className="item-title">
-              <p>Lorem Ipsum</p>
-              <p>1.20 Weth</p>
-            </div>
-            <p className="item-date">Ends in 01.34.45</p>
-          </div>
-          <div className="item">
-            <img
-              className="item-img"
-              src="https://i.ibb.co/2FGw8Fc/Erkan-Erdil-male-warrior-with-huge-katana-fighting-hordes-of-en-02ca9519-3e0d-4aa5-9d70-f16ef0b0a0ff.png"
-              alt="unsplash-OG44d93i-NJk"
-              border={0}
-            />
-            <div className="item-title">
-              <p>Lorem Ipsum</p>
-              <p>1.20 Weth</p>
-            </div>
-            <p className="item-date">Ends in 01.34.45</p>
-          </div>
-          <div className="item">
-            <img
-              className="item-img"
-              src="https://i.ibb.co/7Cc7PnV/Erkan-Erdil-futuristic-Tiger-I-tank-fires-explosive-shell-to-bu-b9868ef6-7525-493e-b0f5-0bb3200e5abb.png"
+              src={p6}
               alt="unsplash-OG44d93i-NJk"
               border={0}
             />
@@ -379,7 +360,7 @@ export default function Home() {
         <a className="social-button instagram" href="https://www.instagram.com/nftbills2023/" target="_blank"><i className="fab fa-instagram" /></a>
       </div>
         <div />
-        <p>Copyright 2023 NFT_BILLS</p>
+        <p>Copyright 2023 NFT_FORTRESS</p>
       </div>
     </div>
   )
