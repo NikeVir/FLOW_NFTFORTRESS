@@ -417,7 +417,7 @@ body {
   margin-bottom: 18px;
 }
 
-.follow {
+.dashboard .follow {
   background: #fdfdfd;
   color: #13131d;
   border: 1px solid rgba(161, 162, 175, 0.3);

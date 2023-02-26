@@ -3,7 +3,7 @@ import '../Styles/Nftcard.css'
 
 export default function Nftcard() {
   return (
-    
+
     <div className="card">
       <div className="card-header">
         <div className="header-left">
@@ -11,7 +11,7 @@ export default function Nftcard() {
         </div>
         <div className="header-right">
           <p className="congrats">Congratulations,</p>
-          <p className="text-d">
+          <p className='congrats_content'>
             Nio-kill for registring with the Jk Tyres. You have successfully
             availed your warranty card.
           </p>
@@ -28,10 +28,10 @@ export default function Nftcard() {
           </div>
           <div className="right-details">
             <div className="warranty-no">
-              <p style={{color: 'grey',fontWeight:'bold'}}> Warranty No.</p> <p style={{fontWeight: "bold"}}>123456</p>
+              <p style={{ color: 'grey', fontSize: '14px', fontWeight: 'bold' }}> Warranty No.</p> <p style={{ fontWeight: "bold" }}>123456</p>
             </div>
             <div className="valid-until">
-              <p style={{color: 'grey',fontWeight:'bold'}}>You warranty will be applicable till</p> <p style={{fontWeight: "bold"}}>08 june, 2022</p>
+              <p style={{ color: 'grey', fontSize: '14px', fontWeight: 'bold' }}>You warranty will be applicable till</p> <p style={{ fontWeight: "bold" }}>08 june, 2022</p>
             </div>
           </div>
         </div>
@@ -71,11 +71,11 @@ export default function Nftcard() {
               <p className="value">Ultima/Blazze</p>
             </div>
           </div>
-          </div>
-          <div className="follow"><p>
-            Follow Below steps to request your warranty claim.</p></div>
         </div>
-        
+        <div className="follow"><p>
+          Follow Below steps to request your warranty claim.</p>
+
+
         <div className="points">
           <ol>
 
@@ -84,7 +84,8 @@ export default function Nftcard() {
             <li>Enter information and Send Claim Request</li>
           </ol>
         </div>
-      
+        </div>
+      </div>
       <div className="continue-button">Continue</div>
     </div>
   )
