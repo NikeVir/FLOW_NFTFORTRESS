@@ -41,6 +41,14 @@ export default function Home() {
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
   }
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  }
+
+
   return (
     
     <div className="landingpage">
@@ -66,15 +74,24 @@ export default function Home() {
         </button>
         <div className="navlinkwrap">
           <span className="navlink "><a href="#">Home</a></span>
-          <span className="navlink"><a href="#">My Nft</a></span>
-          <span className="navlink"> <Link to="/nft-mint">Nft Mint</Link></span>
-          <span className="navlink"><a href="#">How It Works</a></span>
+          <span className="navlink"><a href="#">How it Works</a></span>
+          <span className="navlink"> <Link to="/nft-mint">Glance</Link></span>
+          <span className="navlink"><a href="#">About Us</a></span>
+
+
+          
         </div>
+
+        <div className={`toggle-button ${isChecked ? 'checked' : ''}`} onClick={handleChange}>
+      <div className="toggle-button-circle"></div>
+    </div>
+
         <div className="buttonwrap">
           <button className="createbtn selectedbtn" onClick={OnconnectWallet}>{walletAddress==''?"Connect Wallet":(walletAddress.substring(0, 6) +
           "..." +
           walletAddress.substring(38))}</button>
         </div>
+        
       </div>
       <div className="box">
         <div className="infobox">

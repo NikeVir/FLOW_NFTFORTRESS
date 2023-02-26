@@ -584,6 +584,38 @@
   padding: 0;
 }
 
+
+.toggle-button {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #1F1D2B;
+  cursor: pointer;
+}
+
+.toggle-button-circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #18B2DE;
+  transition: transform 0.2s;
+}
+
+.toggle-button.checked {
+  background-color: #9B51E0;
+}
+
+.toggle-button.checked .toggle-button-circle {
+  transform: translateX(30px);
+  background-color: #1F1D2B;
+}
+
+
+
   @media screen and (max-width: 1500px) {
     .landingpage {
       max-width: 1200px;
@@ -594,6 +626,14 @@
   width: 200px;
     height: 220px;
     }
+
+    .navbar .createbtn.selectedbtn{
+    margin-right: 98px;
+    }
+
+    .navlink a {
+      display: none;
+  }
 
     .discover-items{
       grid-template-columns: auto auto auto auto;
@@ -690,18 +730,14 @@
   }
   @media screen and (max-width: 825px) {
   
-    .navlinkwrap {
-      display: none;
+    .toggle-button{
+      margin-right: 80px;
     }
-  
-    .buttonwrap {
-      display: none;
-    }
-  
+/*   
       .hamburger {
       display: flex !important;
       align-items: center;
-    }
+    } */
   
   
     .started-items {
@@ -827,6 +863,11 @@
       line-height: 18px;
     }
   }
+  @media screen and (max-width: 506px) {
+  .navlinkwrap {
+    max-width: 10%;
+}
+  }
   @media screen and (max-width: 480px) {
     .started-boldtext{
     font-size: 26px;
@@ -878,8 +919,45 @@
     white-space: nowrap;
   }
   
-  @media screen and (max-width: 410px){
+  @media screen and (max-width: 437px){
 .footer-main img {
     width: 303px;
 }
+.navlinkwrap {
+  max-width: 5%;
+}
   }
+  @media screen and (max-width: 390px){
+  .navbar .navlogo {
+    font-size: 22px;
+}
+.navbar .navlogo span {
+  font-size: 22px;
+}
+  }
+
+  @media screen and (max-width: 351px){
+  .navbar .createbtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 71px;
+    height: 43px;
+}
+
+.navbar .createbtn.selectedbtn {
+  font-size: 76%;
+}
+
+  }
+
+
+  @media screen and (max-width: 340px){
+  .landingpage .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0px;
+    width: 40%;
+  }
+}
