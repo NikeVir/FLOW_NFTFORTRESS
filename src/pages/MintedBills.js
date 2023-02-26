@@ -42,19 +42,61 @@ export default function MintedBills() {
     <div >{
         !listNft?(
 <div className='mintedNft_main'>
-        <Nftcard/>
-        <div>
+    <div className='warranty_card_ui'> <Nftcard/></div>
+       
+        <div className='product_details'>
             <div>
-                <h2>
+                <h2 style={{
+                    padding:"10px 1rem",
+                    background:"purple",
+                    width:"40%",
+                    margin:"10px 0",
+                    color:"whitesmoke",
+                    textAlign:"center",
+                    fontWeight:"bold"
+
+                }}>
                     Name of NFT
-                </h2>
-                <h4>
+                </h2 >
+                <h2
+                style={{
+                    padding:"10px 1rem",
+                    background:"grey",
+                    display:"block",
+                    margin:"10px 0",
+                    color:"whitesmoke",
+                    width:"40%",
+                    textAlign:"center",
+                    fontWeight:"bold"
+                }}
+                >Product Id</h2>
+                <h4
+                  style={{
+                    margin:"10px 0",
+                    fontWeight:"bold",
+                    marginTop:"4rem",
+                    textDecorationLine:"underline"
+                }}
+                >
                     PRODUCT DESCRIPTION
                 </h4>
-                <p >
+                <p 
+                style={{
+                    margin:"10px 0",
+                    fontSize:"16px",
+                    minHeight:"150px"
+                }}
+                >
                 The Air Jordan series by Jordan Brand is considered the greatest signature shoe collection ever. The Air Jordan Retro line is at the forefront of modern sneaker collecting culture. Jordan Brand’s flagship model is the Air Jordan 1, a timeless retro basketball shoe first released in 1985 and now offered in three popular silhouettes: high-top, mid-top, and low-top, all of which are consistently the most in-demand sneakers on the market, whether it be the re-release of beloved original colorways, all-new looks, or part of limited edition sneaker collaborations with artists and musicians. Other perennial favorite Air Jordan sneakers are the Air Jordan 3, Air Jordan 4, Air Jordan 6, and Air Jordan 11, just to name a few. Each of Michael Jordan’s sneakers offer plenty of ‘80s and ‘90s basketball nostalgia, as well as a glimpse into the personal life of the greatest basketball player ever. Sneaker culture simply would not be what it is today without the Air Jordan series. Jordan Brand also offers a wide range of high-performance modern day basketball footwear, as well as other lifestyle and performance footwear outside of the Retro Air Jordan line.
                 </p>
-                <button onClick={()=>setListNft(true)}>List NFT</button>
+                <button 
+                 style={{
+                    fontSize:"18px",
+                    Height:"150px",
+                    background:"green",
+                    padding:"10px 30px"
+                }}
+                onClick={()=>setListNft(true)}>List NFT</button>
                 <button >Tranfer Product</button>
             </div>
         </div>
