@@ -6,11 +6,10 @@ body {
 }
 
 body {
-    margin: 0;
-    background-color: #252954;
-    background-color: #1F1D2B;
-  
+
+  background-color: #1F1D2B;
   }
+  
   
   .hidden {
     display: none;
@@ -21,6 +20,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    background-color: #252954;
+    background-color: #1F1D2B;
     
   }
   
@@ -85,7 +87,7 @@ body {
     background: linear-gradient(93.51deg, white 34.84%, #3081ED 82.18%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 115px;
+    margin-bottom: 104px;
   }
   
   .top-rectanglee p {
@@ -103,7 +105,7 @@ body {
     padding: 32px;
     background-color: #f5f5f5;
     border-radius: 16px;
-    margin-top: -100px;
+    margin-top: -110px;
   }
   
   /* Header styles */
@@ -138,7 +140,7 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     background-color: #f9f9f9;
     width: 80%;
-    max-width: 70%;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 0px;
@@ -151,7 +153,8 @@ body {
     -webkit-text-fill-color: transparent;
     font-size: 29.9px;
     font-weight: bold;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
+    margin-top: 28px;
   }
   
   .uploado {
@@ -183,7 +186,7 @@ body {
     /* color: rgb(24, 178, 222); */
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
   }
   
   .upload-box {
@@ -205,12 +208,10 @@ body {
     color: #18B2DE;
     background-color: #1F1D2B;
     font-weight: 700;
-    padding: 5px 18px;
+    padding: 0px 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    max-width: 22%;
-    margin: 4%;
   }
   
   .upload-box button:hover {
@@ -231,15 +232,16 @@ body {
   
   /* Form input styles */
   .form-input {
-    margin-bottom: 13px;
+    /* margin-bottom: 13px; */
     display: flex;
+    margin: 5%;
   }
   
   .form-input label {
     font-size: 16px;
     font-weight: bold;
     margin-right: 16px;
-    text-align: center;
+    /* text-align: center; */
     align-items: center;
     display: flex;
     /* COLOR: #FB37FF; */
@@ -248,11 +250,11 @@ body {
   
   .form-input input,
   .form-input textarea {
-    width: 100%;
+    /* width: 100%; */
     padding: 8px;
     border: 1px solid #4c4c4c;
     border-radius: 8px;
-    font-size: 16px;
+    /* font-size: 16px; */
   }
   
   .form-input input[type="checkbox"] {
@@ -263,7 +265,7 @@ body {
     /* width: 50px; */
     margin-left: 8%;
     height: 24px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
   }
   
   /* Concluding text styles */
@@ -274,11 +276,11 @@ body {
   
   /* Mint button styles */
   .mint-button {
-    width: 100%;
-    height: 55px;
+    width: 40%;
+    height: 34px;
     background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     border: none;
     border-radius: 16px;

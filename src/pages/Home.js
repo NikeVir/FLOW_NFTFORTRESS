@@ -341,12 +341,8 @@ export default function Home() {
           diverse backgrounds, including computer science, finance, and art. We
           share a common goal of leveraging the power of blockchain technology
           to create more secure, transparent, and efficient systems for the
-          creation, distribution, and ownership of digital assets. As crypto
-          enthusiasts, we believe in the transformative potential of NFTs and
-          decentralized applications. We are committed to staying on the cutting
-          edge of developments in the industry, and we regularly participate in
-          conferences, meetups, and hackathons focused on NFTs and related
-          technologies.
+          creation, distribution, and ownership of digital assets. We are committed to staying on the cutting
+          edge of developments in the industry.
             </p>
         </div>
 
