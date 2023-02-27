@@ -84,7 +84,10 @@ export default function MintedBills() {
                 style={{
                     margin:"10px 0",
                     fontSize:"16px",
-                    minHeight:"150px"
+                    minHeight:"150px",
+                    border:"0.5px solid grey",
+                    padding:"2%",
+                    borderRadius:"10px"
                 }}
                 >
                 The Air Jordan series by Jordan Brand is considered the greatest signature shoe collection ever. The Air Jordan Retro line is at the forefront of modern sneaker collecting culture. Jordan Brand’s flagship model is the Air Jordan 1, a timeless retro basketball shoe first released in 1985 and now offered in three popular silhouettes: high-top, mid-top, and low-top, all of which are consistently the most in-demand sneakers on the market, whether it be the re-release of beloved original colorways, all-new looks, or part of limited edition sneaker collaborations with artists and musicians. Other perennial favorite Air Jordan sneakers are the Air Jordan 3, Air Jordan 4, Air Jordan 6, and Air Jordan 11, just to name a few. Each of Michael Jordan’s sneakers offer plenty of ‘80s and ‘90s basketball nostalgia, as well as a glimpse into the personal life of the greatest basketball player ever. Sneaker culture simply would not be what it is today without the Air Jordan series. Jordan Brand also offers a wide range of high-performance modern day basketball footwear, as well as other lifestyle and performance footwear outside of the Retro Air Jordan line.
@@ -93,11 +96,22 @@ export default function MintedBills() {
                  style={{
                     fontSize:"18px",
                     Height:"150px",
-                    background:"green",
-                    padding:"10px 30px"
+                    color:"whitesmoke",
+                    background:"linear-gradient(to right,#5a04a0,#99038d)",
+                    padding:"10px 30px",
+                
                 }}
                 onClick={()=>setListNft(true)}>List NFT</button>
-                <button >Tranfer Product</button>
+                <button 
+                 style={{
+                    fontSize:"18px",
+                    Height:"150px",
+                    background:"linear-gradient(to right,#8416de,#2252f1)",
+                    padding:"10px 30px",
+                    marginLeft:"20px",
+                    color:"whitesmoke",
+                }}
+                >Tranfer Product</button>
             </div>
         </div>
 

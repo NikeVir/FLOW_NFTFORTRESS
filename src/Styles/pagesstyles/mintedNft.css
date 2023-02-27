@@ -1,18 +1,21 @@
 .mintedNft_main{
     width: 90%;
     margin: auto;
-    border: 1px solid black;
+    box-shadow: 0 0 10px 5px rgba(111, 111, 111, 0.2);
     /* margin-top: 10px; */
     display: flex;
     flex-direction: row;
     padding: 20px 40px;
     margin-top: 2%;
 }
+
 .warranty_card_ui{
     flex-basis: 40%;
 }
 .product_details{
-    flex-basis: 60%;
+    flex-basis: 65%;
+    box-shadow: 0 0 10px 5px rgba(111, 111, 111, 0.2);
+    padding: 2%;
 }
 .listNFT{
     width: 90%;

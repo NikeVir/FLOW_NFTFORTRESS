@@ -12,6 +12,7 @@ import {
   Route,
 } from "react-router-dom";
 import MintedBills from './pages/MintedBills'
+import Sellerauth from './pages/Sellerauth'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/nft-mint" element={<Mintbills />}/>
 
         <Route path="/dashboard" element={<Mywarrentycards />}/>
+        <Route path="/sellerauth" element={<Sellerauth />}/>
         <Route path="/dashboard/mintedbills" element={<MintedBills />}/>
 
         </Routes>
