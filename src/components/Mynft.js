@@ -4,11 +4,9 @@ export default function Mynft() {
   return (
     <div className='mynft_container'>
         <div>
-            <h2 
-         
-            >WARRENTY CARDS</h2>
+            <h2>WARRENTY CARDS</h2>
            <div>
-            
+
            </div>
         </div>
         

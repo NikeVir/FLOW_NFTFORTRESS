@@ -1,93 +1,49 @@
-/* Page styles */
-
-body {
-  /* transform: scale(0.68); */
-  /* transform-origin: 0 0; */
+.mint_body{
+  background: #badefa;
+  height: 100vh;
 }
 
-body {
 
-  background-color: #1F1D2B;
-  }
-  
-  
-  .hidden {
-    display: none;
-  }
-  
   .page-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: #252954;
-    background-color: #1F1D2B;
-    
+   
   }
   
-  .page-container::before {
-    content: "";
-    position: absolute;
-    width: 159px;
-    height: 159px;
-    left: 79%;
-    top: 600px;
-    filter: blur(90px);
-    background-color: #FB37FF;
-  }
-  
-  .mint-box::before {
-    content: "";
-    position: absolute;
-    width: 159px;
-    height: 159px;
-    right: 79%;
-    top: 600px;
-    filter: blur(90px);
-    background-color: #FB37FF;
-  }
-  
-  .page-container::after {
-    content: "";
-    position: absolute;
-    width: 123px;
-    height: 123px;
-    left: 80%;
-    top: 550px;
-    background-color: #18B2DE;
-    filter: blur(80px);
-  }
-  
-  .mint-box::after {
-    content: "";
-    position: absolute;
-    width: 123px;
-    height: 123px;
-    right: 80%;
-    top: 550px;
-    background-color: #18B2DE;
-    filter: blur(80px);
-  }
-  
+
   /* Top rectangle styles */
   .top-rectanglee {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 200px;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    display: flex;
   }
-  
+.top-rectanglee div{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.transact{
+  margin: 0 10px;
+  border: 2px solid rgb(18, 172, 244);
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.walletad{
+  margin: 0 10px;
+  border: 2px solid rgb(18, 172, 244);
+  padding: 5px 10px;
+  border-radius: 6px;
+}
   .top-rectanglee h1 {
-    font-size: 32.64px;
-    font-weight: bold;
-  
-    background: linear-gradient(93.51deg, white 34.84%, #3081ED 82.18%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 104px;
+    font-size: 25px;
+    font-weight: 800;
+    display: inline;
   }
   
   .top-rectanglee p {
@@ -101,11 +57,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    min-width: 90%;
     padding: 32px;
     background-color: #f5f5f5;
     border-radius: 16px;
-    margin-top: -110px;
   }
   
   /* Header styles */
@@ -134,7 +89,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -106px;
     padding: 32px;
     border-radius: 16px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -162,6 +116,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px dashed  rgb(18, 172, 244);
+    border-radius: 15px;
+    width: 400px;
+    height: 300px;
   }
   
   /* Mint form styles */
@@ -194,7 +152,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 16px;
     justify-content: center;
     /* margin-top: 10%; */
   }
@@ -677,15 +634,7 @@ body {
     margin-top: 2%;
   }
   
-  .top-rectanglee:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: 80px;
-    filter: blur(150px);
-    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
-  }
+
   
   /* background: linear-gradient(93.51deg, white 34.84%, #3081ED 82.18%);
       -webkit-background-clip: text;
@@ -694,3 +643,102 @@ body {
       font-style: normal;
       font-weight: 700;
       font-size: 32px; */
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+      
+      table caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+      }
+      
+      table tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: .35em;
+      }
+      .leaderboard_td1{
+        width: 100px;
+      }
+      table th,
+      table td {
+        padding: .625em;
+        text-align: center;
+      }
+      table td{
+        font-size: 0.8rem;
+      }
+      table th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+      
+      @media screen and (max-width: 600px) {
+        table {
+          border: 0;
+        }
+      
+        table caption {
+          font-size: 1.3em;
+        }
+        
+        table thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        
+        table tr {
+          border-bottom: 3px solid #ddd;
+          display: block;
+          margin-bottom: .625em;
+        }
+        
+        table td {
+          border-bottom: 1px solid #ddd;
+          display: block;
+          font-size: .5em;
+          text-align: right;
+        }
+        
+        table td::before {
+          /*
+          * aria-label has no advantage, it won't be read inside a table
+          content: attr(aria-label);
+          */
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        
+        table td:last-child {
+          border-bottom: 0;
+        }
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      /* general styling */
