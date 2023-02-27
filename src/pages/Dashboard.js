@@ -58,7 +58,6 @@ export default function Mywarrentycards() {
                 <p onClick={()=>setDashnav("history")}><FontAwesomeIcon icon={faFolderClosed} />History</p>
               </div>
             </div>
-
           </div>
 
 <div className="dashboard-content">
