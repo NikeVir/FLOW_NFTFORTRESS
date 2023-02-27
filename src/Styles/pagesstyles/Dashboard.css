@@ -1035,6 +1035,8 @@ font-size: 14px;
   caption-side: bottom;
 border-collapse: collapse;
 }
+
+
 td{
   min-width: 150px !important;
 }
