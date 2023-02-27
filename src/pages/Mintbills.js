@@ -203,7 +203,7 @@ export default function Mintbills() {
                   <div className="mint-form">
 
                     <div className="left-form">
-                      <p style={{ fontSize: "27px", margin: "11px", fontWeight: "bold" }}>
+                      <p style={{  margin: "11px", fontWeight: "bold" }}>
                         Upload
                       </p>
                       <div className="uploado">
