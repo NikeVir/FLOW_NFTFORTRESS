@@ -826,12 +826,7 @@ body{
     background-color: var(--white);
     font-family: "Poppins", sans-serif;
 }
-a{
-    text-decoration: none;
-}
-ul{
-    list-style: none;
-}
+
 .header{
   background-color: var(--black);
   box-shadow: 1px 1px 5px 0px var(--gray);
@@ -1063,11 +1058,7 @@ tr{
 tr:hover{
   background-color: #FAFAFA;
 }
-a{
- position: relative;
- bottom: 12px;
- left: 20px;
-}
+
 .thead-light th{
   text-align: left;
   padding: 20px 0 !important;
@@ -1104,3 +1095,4 @@ color: #525f7f;
     font-size: 12px;
   }
 }
+

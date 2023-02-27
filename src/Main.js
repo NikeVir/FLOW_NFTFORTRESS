@@ -17,7 +17,7 @@ export default function Main() {
         <Route path="/nft-mint" element={<Mintbills />}/>
         <Route path="/dash" element={<Testdash />}/>
 
-      {/* <Mintbills/>*/}
+      <Mintbills/>
       {/* <Nftcard/>  */}
     </div>
   )
