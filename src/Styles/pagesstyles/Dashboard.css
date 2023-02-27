@@ -817,16 +817,14 @@
 } /* variables*/
 
 /* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
-}
 
+
+.dashboard a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
 .header{
   background-color: var(--black);
   box-shadow: 1px 1px 5px 0px var(--gray);
@@ -1061,6 +1059,11 @@ tr:hover{
   background-color: #FAFAFA;
 }
 
+.dashboard a{
+ position: relative;
+ bottom: 12px;
+ left: 20px;
+}
 .thead-light th{
   text-align: left;
   padding: 20px 0 !important;
