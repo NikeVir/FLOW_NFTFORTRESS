@@ -9,7 +9,6 @@ import {
   Route,
 } from "react-router-dom";
 import Sellerauth from './pages/Sellerauth'
-import { connectWallet, getCurrentWalletConnected } from './util/interact'
 function App() {
 
   return (
