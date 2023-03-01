@@ -30,7 +30,7 @@ export default function Nftcard({nft}) {
     if(d>x){
       return true;
     }
-    false;
+    return false;
   }
   return (
     <>
