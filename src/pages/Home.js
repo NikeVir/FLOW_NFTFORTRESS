@@ -19,17 +19,9 @@ export default function Home() {
  
   useEffect(() => {
 
-
-   
   }, []);
  
-  const OnconnectWallet =async()=>{
-    const walletResponse = await connectWallet();
-    console.log(walletResponse)
-    setStatus(walletResponse.status);
-    setWallet(walletResponse.address);
-  }
-
+ 
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {
@@ -70,12 +62,12 @@ export default function Home() {
          style={{
           marginRight:"-15rem"
       }}>
-          <Link to="/sellerauth"><button className="createbtn selectedbtn" onClick={OnconnectWallet}>AS A Minter</button></Link>
+          <Link to="/sellerauth"><button className="createbtn selectedbtn" >AS A Minter</button></Link>
         </div><div className="buttonwrap"
             style={{
               marginRight:"0rem"
             }}>
-          <Link to="/dashboard"><button className="createbtn selectedbtn" onClick={OnconnectWallet}>AS A User</button></Link>
+          <Link to="/dashboard"><button className="createbtn selectedbtn" >AS A User</button></Link>
         </div>
 
      
