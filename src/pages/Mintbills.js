@@ -14,7 +14,7 @@ import {
   getCurrentWalletConnected
 } from '../util/interact';
 import Pagination from 'react-bootstrap/Pagination';
-const { ethers } = require("ethers");
+import {ethers} from 'ethers'
 
 export default function Mintbills() {
   const [walletAddress, setWallet] = useState("");

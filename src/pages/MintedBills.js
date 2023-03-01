@@ -6,7 +6,7 @@ import { Alchemy,Network } from 'alchemy-sdk';
 import { getCurrentWalletConnected, mintContract } from '../util/interact';
 import mintABI from '../NftMintABI.json'
 import Modal from 'react-bootstrap/Modal';
-const { ethers } = require("ethers");
+import {ethers} from 'ethers'
 
 export default function MintedBills({viewnft,setview}) {
     const [waddress,setAddress] = useState(""); 

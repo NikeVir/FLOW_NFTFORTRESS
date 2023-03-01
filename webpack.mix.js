@@ -1,4 +1,4 @@
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+import {NodePolyfillPlugin} from "node-polyfill-webpack-plugin"
 mix.webpackConfig(webpack => {
     return {
         plugins: [
