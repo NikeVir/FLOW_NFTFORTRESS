@@ -74,9 +74,9 @@ export default function Home() {
           </svg>
         </button>
         <div className="navlinkwrap">
-          <span className="navlink"><a href="#">How it Works</a></span>
-          <span className="navlink"> <Link to="/nft-mint">Glance</Link></span>
-          <span className="navlink"><a href="#">About Us</a></span> 
+          <span className="navlink"><a href="#hw">How it Works</a></span>
+          <span className="navlink"> <a href="#glance">Glance</a></span>
+          <span className="navlink"><a href="#about">About Us</a></span> 
         </div>
 
         <div className="buttonwrap"
@@ -110,8 +110,7 @@ export default function Home() {
             blockchain.
           </p>
           <div className="infobox-btnwrapper">
-            <button className="infobox-explorebtn selected">TRENDING</button>
-            <button className="infobox-createbtn">Create</button>
+            <button className="infobox-createbtn"><Link to='/sellerauth' style={{color:"white",textDecoration:"none",fontSize:"20px"}}>Create</Link></button>
           </div>
         </div>
         <div className="display">
@@ -121,6 +120,7 @@ export default function Home() {
             alt="unsplash-OG44d93i-NJk"
             border={0}
           />
+
           <div className="infowrapper">
             <div className="info">
               <img
@@ -141,7 +141,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="started">
+      <div id="hw" className="started">
         <p className="started-boldtext">Getting started</p>
         <p className="started-slimtext">
           Revolutionize the way you buy and sell with NFT warranty cards - the
@@ -246,7 +246,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="discover">
+      <div id='glance' className="discover">
         <div className="discover-title">
           <p>At a Glance</p>
         </div>
@@ -333,7 +333,7 @@ export default function Home() {
         <button className="discover-loadbtn">LOAD MORE</button>
       </div>
 
-      <div className="discover-title">
+      <div id='about' className="discover-title">
         <p>About US</p>
       </div>
       <div className="footer">
