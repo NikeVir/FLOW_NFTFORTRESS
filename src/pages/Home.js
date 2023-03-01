@@ -6,8 +6,7 @@ import p3 from "./p3.jpg";
 import p4 from "./p4.jpg";
 import p5 from "./p5.jpg";
 import p6 from "./p6.jpg";
-import { connectWallet,
-  getCurrentWalletConnected } from '../util/interact';
+import { connectWallet} from '../util/interact';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,22 +15,10 @@ import {
 } from "react-router-dom";
 import UserContext from '../ContextProvider';
 export default function Home() {
-  const { waddress,setAddress} = useContext(UserContext)
 
-  const [walletAddress, setWallet] = useState("");
-  const [status, setStatus] = useState("");
-  const [nftdata,setNftdata] = useState({
-    
-  })
+ 
   useEffect(() => {
-    const checkwallet =async()=>{
-      const { address, status } = await getCurrentWalletConnected();
-      setWallet(address);
-      setStatus(status);
-      setAddress(address)
-  
-    }
-    checkwallet();
+
 
    
   }, []);
@@ -81,21 +68,17 @@ export default function Home() {
 
         <div className="buttonwrap"
          style={{
-          marginRight:"-10rem"
+          marginRight:"-15rem"
       }}>
           <Link to="/sellerauth"><button className="createbtn selectedbtn" onClick={OnconnectWallet}>AS A Minter</button></Link>
         </div><div className="buttonwrap"
             style={{
-              marginRight:"-10rem"
+              marginRight:"0rem"
             }}>
           <Link to="/dashboard"><button className="createbtn selectedbtn" onClick={OnconnectWallet}>AS A User</button></Link>
         </div>
 
-        <div className="buttonwrap">
-          <button className="createbtn selectedbtn" onClick={OnconnectWallet}>{walletAddress==''?"Connect Wallet":(walletAddress.substring(0, 6) +
-          "..." +
-          walletAddress.substring(38))}</button>
-        </div>
+     
         
       </div>
       <div className="box">
