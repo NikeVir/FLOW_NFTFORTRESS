@@ -84,7 +84,6 @@ export default function Sellerauth() {
 				return
 			}
 			let register = await contract.registerSeller(address,parseInt(orgId))
-			setStatus("true")
 		}catch(err){
 			console.log(err)
 		}
