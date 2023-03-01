@@ -3,6 +3,8 @@ import '../Styles/pagesstyles/Dashboard.css'
 import { Alchemy, Network } from 'alchemy-sdk';
 import MintedBills from '../pages/MintedBills';
 import { getCurrentWalletConnected } from '../util/interact';
+
+
 export default function Mynft() {
   const [mynfts,setMynfts] = useState([])
   const [vnft,setViewNft] = useState({})

@@ -6,7 +6,7 @@ import p3 from "./p3.jpg";
 import p4 from "./p4.jpg";
 import p5 from "./p5.jpg";
 import p6 from "./p6.jpg";
-import  "https://use.fontawesome.com/releases/v5.0.13/js/all.js" ;
+
 import { connectWallet,
   getCurrentWalletConnected } from '../util/interact';
 import {

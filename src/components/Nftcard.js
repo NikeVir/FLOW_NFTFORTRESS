@@ -5,6 +5,8 @@ import QRCode from "react-qr-code";
 import Web3Modal from "web3modal";
 import mintABI from '../NftMintABI.json'
 import {ethers} from 'ethers'
+
+
 export default function Nftcard({nft}) {
   const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
