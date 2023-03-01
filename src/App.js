@@ -1,6 +1,6 @@
 
 import './index.css'
-import React from 'react'
+import React,{useContext, useEffect} from 'react'
 import Home from './pages/Home'
 import Mintbills from './pages/Mintbills'
 import Mywarrentycards from './pages/Dashboard'
@@ -13,8 +13,10 @@ import {
 } from "react-router-dom";
 import MintedBills from './pages/MintedBills'
 import Sellerauth from './pages/Sellerauth'
-
+import UserContext from './ContextProvider'
+import { connectWallet, getCurrentWalletConnected } from './util/interact'
 function App() {
+
   return (
     <div>
        <Routes>

@@ -14,6 +14,7 @@ import {
   getCurrentWalletConnected
 } from '../util/interact';
 import Pagination from 'react-bootstrap/Pagination';
+const { ethers } = require("ethers");
 
 export default function Mintbills() {
   const [walletAddress, setWallet] = useState("");
@@ -22,7 +23,7 @@ export default function Mintbills() {
   const handleShow = () => setShow(true);
   const [tarr, setTarr] = useState([])
   const [navbar, setNavbar] = useState("mint")
-
+  const [status,setStatus] =useState("")
 
 
   useEffect(() => {
@@ -40,7 +41,6 @@ export default function Mintbills() {
 
 
 
-  const { ethers } = require("ethers");
   var loadFile = function (event) {
     var image = document.getElementById("output");
     image.src = URL.createObjectURL(event.target.files[0]);
@@ -49,8 +49,20 @@ export default function Mintbills() {
   const handlesubmit = async (e) => {
     try {
       e.preventDefault();
+      const web3Modal = new Web3Modal()
+      const connection = await web3Modal.connect()
+      const provider = new ethers.providers.Web3Provider(connection);
+      const signer = provider.getSigner();
+      let contract = new ethers.Contract("0x99886c348895FD97fFAFb968E1e3A022368a1039", mintABI, signer)
       handleShow()
+      console.log(walletAddress)
+      // let checkseller = await contract.isMember(parseInt(e.target.org.value),walletAddress)
+      // if(!checkseller){
+      //   setStatus("nr")
+      //   return;
+      // }
       setStatus("upd")
+
       const image = e.target.image.files[0];
       const name = e.target.name.value;
       const tokenId = 1;
@@ -61,7 +73,7 @@ export default function Mintbills() {
         "tokenid": tokenId,
         "image": res.pinataURL,
         "description": e.target.desc.value,
-        "symbol": e.target.symbol.value,
+        "symbol": "NFTFORTRESS",
         "attributes": [
           {
             "trait_type": "warrentyPeriod",
@@ -87,6 +99,10 @@ export default function Mintbills() {
             "trait_type": "mintername",
             "value": e.target.mintername.value,
           }
+          ,{
+            "trait_type": "Organization ID",
+            "value": e.target.org.value,
+          }
         ]
       }
       console.log(JSON.stringify(register))
@@ -96,13 +112,8 @@ export default function Mintbills() {
         return "Failed";
       }
       setStatus("tsn")
-      const web3Modal = new Web3Modal()
-      const connection = await web3Modal.connect()
-      const provider = new ethers.providers.Web3Provider(connection);
 
-      const signer = provider.getSigner();
-      let contract = new ethers.Contract("0x2bfb57b3ba0dcfa030ed01956df85c37d40cf87f", mintABI, signer)
-      let transaction = await contract.safeMint("0x0ffb1A8168bb56DECEABaBd4606200d50078cC1C", response.pinataURL)
+      let transaction = await contract.safeMint(e.target.address.value, response.pinataURL)
       await transaction.wait()
       setStatus("true")
 
@@ -120,25 +131,6 @@ export default function Mintbills() {
   }
 
 
-  const getnft = async () => {
-    const alchemy = new Alchemy(alchemysettings);
-    const nfts = await alchemy.nft.getNftsForOwner("0x0ffb1A8168bb56DECEABaBd4606200d50078cC1C");
-    // Print NFTs
-    console.log(nfts);
-    // const web3Modal = new Web3Modal()
-    //     const connection = await web3Modal.connect()
-    //     const provider = new ethers.providers.Web3Provider(connection);
-    //     const signer = provider.getSigner();
-    //     let contract = new ethers.Contract("0x2bfb57b3ba0dcfa030ed01956df85c37d40cf87f", mintABI, signer)
-    //     let transaction = await contract.tokenURI("3")
-    //     let meta = await axios.get(transaction,{
-    //       headers: {
-    //         'Accept': 'text/plain'
-    //       }
-    //     });
-    //     meta = meta.data;
-    //     console.log(meta);
-  }
 
 
 
@@ -149,7 +141,7 @@ export default function Mintbills() {
     const alchemy = new Alchemy(alchemysettings);
     const Transfers = await alchemy.core.getAssetTransfers({
       toAddress: walletAddress,
-      contractAddresses: ["0x2bfb57b3ba0dcfa030ed01956df85c37d40cf87f"],
+      contractAddresses: ["0x99886c348895FD97fFAFb968E1e3A022368a1039"],
       category: ["erc721"],
     });
     setTarr(Transfers.transfers)
@@ -246,14 +238,18 @@ export default function Mintbills() {
 
                       <div className="imp">
                         <div className="form-input">
-                          <label htmlFor="productid">Product ID</label>
+                          <label htmlFor="productid">Product ID:</label>
                           <input name="productId" type="text" id="productid" />
                         </div>
 
                         <div className="form-input">
-                          <label htmlFor="name">Minter Name</label>
+                          <label htmlFor="name">Minter Name:</label>
                           <input name="mintername" type="text" id="name" />
                         </div>
+                        <div className="form-input">
+                        <label htmlFor="name">Reciever Address: </label>
+                        <input name="address" type="text" id="name" />
+                      </div>
 
                       </div>
                     </div>
@@ -272,32 +268,33 @@ export default function Mintbills() {
                       </div>
 
                       <div className="form-input">
-                        <p>Warranty Period</p>
+                        <p>Warranty Period:</p>
                         <input name="warrentyPeriod" type="date" />
                       </div>
 
                       <div className="form-input">
-                        <p>Date</p>
+                        <p>Date:</p>
                         <input name="date" type="date" id="date" />
                       </div>
                       <div className="form-input" style={{ marginBottom: "2%" }}>
-                        <label htmlFor="location">Location</label>
+                        <label htmlFor="location">Location:</label>
                         <input type="text" name="location" id="location" />
                       </div>
+                     
                       <div className="form-input">
-                        <label htmlFor="name">Symbol </label>
-                        <input name="symbol" type="text" id="name" />
+                        <label htmlFor="name">Organization ID:</label>
+                        <input name="org" type="text" id="name" />
                       </div>
-
                     </div>
                   </div>
+                  <button type='submit' className="mint-button">Mint</button>
+
                   <div className="concluding-text">
-                    <p style={{ marginTop: "0%", fontSize: "12px", color: "grey" }}>
+                    {/* <p style={{ marginTop: "0%", fontSize: "12px", color: "grey" }}>
                       By minting this NFT, you certify that you are the rightful owner of
                       the content and have the legal right to mint and sell it as an NFT.
-                    </p>
+                    </p> */}
                   </div>
-                  <button type='submit' className="mint-button">Mint</button>
                 </form>
 
               </div>
@@ -369,7 +366,7 @@ export default function Mintbills() {
           </Modal.Header>
           <Modal.Body>
             {
-              status == "upd" ? ("Uploading to IPFS....") : status == "tsn" ? "Transaction..." : status == "true" ? "Success" : "failed"
+              status == "upd" ? ("Uploading to IPFS....") : status == "tsn" ? "Transaction..." : status == "true" ? "Success" : status=="nr"?"You are not registered":"failed"
             }
 
           </Modal.Body>
@@ -384,7 +381,7 @@ export default function Mintbills() {
                 fontSize: "60px",
                 color: "#1ECC89"
 
-              }} icon={faCircleCheck} />) : status == "failed" ? (<FontAwesomeIcon
+              }} icon={faCircleCheck} />) : status == "failed" || status == "nr" ? (<FontAwesomeIcon
                 style={{
                   fontSize: "60px",
                   color: "#E01B3C"

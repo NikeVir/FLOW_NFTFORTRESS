@@ -2,21 +2,11 @@
 const alchemyKey = "7Z70htLxzC33FHNzbQEf19QssuwQQJ3M"
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 export const web3 = createAlchemyWeb3("wss://polygon-mumbai.g.alchemy.com/v2/QfT2kCFxO-Iq94Vzw70-EflkOW1P7OPx");
-import mintABI from "../NftMintABI.json"
-// const contractABI = require("../contract-abi.json");
 const contractAddress = "0x2bfb57b3ba0dcfa030ed01956df85c37d40cf87f";
 const contractAddress1 = "0x3e9ce30d57425b2f29332d2f2c6700f7a9a6f75f";
 
 
-export const mintContract = new web3.eth.Contract(
-  mintABI,
-  "0x2bfb57b3ba0dcfa030ed01956df85c37d40cf87f"
-);
 
-// export const loadCurrentMessage = async () => {
-//   const message = await helloWorldContract.methods.message().call();
-//   return message;
-// };
 
 export const connectWallet = async () => {
   if (window.ethereum) {
@@ -63,12 +53,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Write a message in the text-field above.",
+          status: "true",
         };
       } else {
         return {
           address: "",
-          status: "🦊 Connect to Metamask using the top right button.",
+          status: "false",
         };
       }
     } catch (err) {

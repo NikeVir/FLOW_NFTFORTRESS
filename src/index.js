@@ -8,11 +8,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { ContexProvider } from './ContextProvider.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
     <BrowserRouter>
+   <ContexProvider>
     <App />
+  </ContexProvider>
     </BrowserRouter>
 
 );

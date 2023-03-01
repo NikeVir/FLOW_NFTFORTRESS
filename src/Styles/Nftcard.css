@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right,#5a04a0,#99038d);
+    background:#c21db4;
     border-radius: 8px 8px 0px 0px;
     padding: 16px;
   }

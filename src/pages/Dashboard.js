@@ -1,29 +1,20 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import '../Styles/pagesstyles/Dashboard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCreditCard, faCreditCardAlt, faFolderClosed, faHome, faHomeLg, faHomeLgAlt, faHomeUser, faShop, faSquarePlus, faWallet } from '@fortawesome/free-solid-svg-icons'
+import { faCreditCard,  faFolderClosed,  faHomeLgAlt,  faShop, faSquarePlus, faWallet } from '@fortawesome/free-solid-svg-icons'
 import Mynft from '../components/Mynft';
+import { connectWallet,
+  getCurrentWalletConnected } from '../util/interact';
+import { Alchemy, Network } from 'alchemy-sdk';
+
+
 export default function Mywarrentycards() {
-  const [theme, setTheme] = useState("light");
+
+  const [walletaddress,setWalletaddress] = useState("")
   const [navbtn, setNavbtn] = useState(false);
   const [dashnav, setDashnav] = useState('dashboard')
-  const settheme = () => {
-    const dark = document.querySelector(".dark");
-    const light = document.querySelector(".light");
-    if (theme == "light") {
-      document.querySelector("body").classList.add("darkMode");
-      dark.classList.add("active");
-      light.classList.remove("active");
-      setTheme("dark")
-    }
-    else {
-      document.querySelector("body").classList.remove("darkMode");
-      dark.classList.remove("active");
-      light.classList.add("active");
-      setTheme("light")
-
-    }
-  }
+  const [balance,setbalance] = useState('0')
+  const [tcards,setTcards] = useState(0)
   const onClicknav = () => {
     if (navbtn) {
       setNavbtn(false);
@@ -32,8 +23,43 @@ export default function Mywarrentycards() {
       setNavbtn(true)
     }
   }
-
-
+  const OnconnectWallet =async()=>{
+    const walletResponse = await connectWallet();
+    setWalletaddress(walletResponse.address);
+  }
+  useEffect(()=>{
+    const getaddress=async()=>{
+      
+      const {address,status}= await getCurrentWalletConnected();
+      await connectWallet();
+      if(address==undefined){
+        await connectWallet();
+      const {address,status}= await getCurrentWalletConnected();
+      setWalletaddress(address);
+     }
+      
+     else{
+       setWalletaddress(address);
+     }
+    }
+    getaddress()
+    getTransaction()
+  },[])
+  var alchemysettings = {
+    apiKey: "QfT2kCFxO-Iq94Vzw70-EflkOW1P7OPx",
+    network: Network.MATIC_MUMBAI,
+  }
+  const getTransaction = async () => {
+    const {address,status}= await getCurrentWalletConnected();
+    const alchemy = new Alchemy(alchemysettings);
+    const nfts = await alchemy.nft.getNftsForOwner(address);
+    const Transfers = await alchemy.core.getBalance(address);
+    var x = Transfers._hex.substring(2)
+    var y = parseInt(x,16)/1000000000000000000;
+    setTcards(nfts.ownedNfts.length);
+    setbalance(y.toFixed(2))
+   
+  }
 
   return (
     <div>
@@ -42,48 +68,46 @@ export default function Mywarrentycards() {
         <div className="dashboard">
           <div className={`${navbtn ? "sidebar flex-c flex-sb" : "sidebar closesidebar flex-c flex-sb"}`}>
             <span className={`${navbtn ? "sidenavbtn" : "sidenavbtn"}`} onClick={onClicknav}></span>
-            <div className={`${navbtn ? "brand" : " brand closesidenav"}`} >NFT LAB</div>
+            <div className={`${navbtn ? "brand" : " brand closesidenav"}`} >NFTFORTRESS</div>
             <div className={`${navbtn ? "side-nav" : "side-nav closesidenav"}`} >
-              <div className="menu-item flex active">
+              <div className="flex menu-item active">
                 <p onClick={()=>setDashnav("dashboard")}><FontAwesomeIcon icon={faHomeLgAlt} />Dashboard</p>
               </div>
-              <div className="menu-item flex">
-                <p onClick={()=>setDashnav("marketplace")}><FontAwesomeIcon icon={faShop} />Market</p>
-              </div>
-              <div className="border"></div>
-              <div className="menu-item flex">
+
+              <div className="flex menu-item">
                 <p onClick={()=>setDashnav("mybills")}><FontAwesomeIcon icon={faCreditCard} />My Products</p>
               </div>
-              <div className="menu-item flex">
+              {/* <div className="flex menu-item">
                 <p onClick={()=>setDashnav("history")}><FontAwesomeIcon icon={faFolderClosed} />History</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
 <div className="dashboard-content">
 
-<div className="topbar flex flex-sb">
-  <div className="user flex flex-sb">
+<div className="flex topbar flex-sb">
+  <div onClick={OnconnectWallet} className="flex user flex-sb">
 
-    <p><FontAwesomeIcon icon={faSquarePlus} /><span> Create Asset</span> </p>
-    <p><FontAwesomeIcon icon={faWallet} /> <span>Wallet Address</span> </p>
+    {/* <p><FontAwesomeIcon icon={faSquarePlus} /><span> Create Asset</span> </p> */}
+    <p><FontAwesomeIcon icon={faWallet} /> <span >{walletaddress==''?"Connect Wallet":(walletaddress.substring(0, 6) +
+          "..." +
+          walletaddress.substring(38))}</span> </p>
   </div>
 </div>
 {
   (dashnav=="dashboard")?(
-<div className="section flex flex-sb">
+<div className="flex section flex-sb">
 
   <div className="section-left">
 
     <div className="box">
-      <div className="banner flex flex-sb">
+      <div className="flex banner flex-sb">
         <div className="banner_text">
           <h2>
-            Discover and sell
-            your own product with NFT luxury
+            Manage your Warranty and bills with NFT luxury
           </h2>
 
-          <a href="#" className="btn">Discover Now</a>
+          <a href="#" className="btn">Check Now</a>
         </div>
 
         <img
@@ -92,19 +116,15 @@ export default function Mywarrentycards() {
         />
       </div>
 
-      <div className="graph flex-c">
-        <p>Balance</p>
-        <h2>93,565.00</h2>
-
-      </div>
+    
     </div>
 
     <div className="nfts">
-      <div className="trending heading flex flex-sb">
+      <div className="flex trending heading flex-sb">
 
       </div>
 
-      <div className="categories flex flex-sb">
+      <div className="flex categories flex-sb">
       </div>
       <div className="browse">
         <div className="nft">
@@ -116,7 +136,7 @@ export default function Mywarrentycards() {
 
             <p>BALANCE</p>
 
-            <div className="price" >4.5 ETH</div>
+            <div className="price" >{balance} MATIC</div>
           </div>
         </div>
 
@@ -125,32 +145,28 @@ export default function Mywarrentycards() {
             src="/wallet.png"
             alt=""
           />
-          <div className="title">TOTAL OWNED</div>
-          <div className="details flex flex-sb">
-            <div className="author flex">
-
-              <p>Nio kill 2</p>
-            </div>
-            <div className="price">4 ETH</div>
+          <div  className="details " style={{ textAlign: "center" }}>
+          <p>TOTAL CARDS</p>
+            <div className="price">{tcards}</div>
           </div>
         </div>
 
 
 
-        <div className="nft">
+        {/* <div className="nft">
           <img
             src="/history.png"
             alt=""
           />
           <div className="title">EXPIRED</div>
-          <div className="details flex flex-sb">
-            <div className="author flex">
+          <div className="flex details flex-sb">
+            <div className="flex author">
 
               <p>Nio kill 4</p>
             </div>
             <div className="price">5 ETH</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   </div>

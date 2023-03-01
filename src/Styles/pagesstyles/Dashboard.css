@@ -71,12 +71,12 @@
 
 
 .brand {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   color: #1e1e2d;
   cursor: pointer;
- margin:15px 20px;
+ margin:15px 10px;
 }
 
 .menu-item {
@@ -126,7 +126,7 @@
   transition: 0.5s ease-out;
 }
 .topbar{
-  width: 95%;
+  width: 100%;
   margin: auto;
   padding:1.5rem 1rem;
   background-color: #ffff;
@@ -276,6 +276,7 @@
 .nfts {
   padding: 0 8px;
   margin: 25px 0.5;
+
 }
 
 .heading h2 {
@@ -329,16 +330,158 @@
   border:0.2px solid #e7eaf0;
   transition: 0.4s linear;
   margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  max-width: auto;
+}
+.nfts_grids{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.nft_details{
+  padding: 0 12px;
+  box-sizing: border-box;
+  min-width: 200px;
+}
+.nft_details .title{
+  background-color: #7c80ff;
+  padding: 4px 15px;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+}
+.nft_dates span{
+  font-size: 16px;
+  font-weight: 600;
 }
 
+.nft_dates p{
+  font-size: 14px;
+  margin:3px;
+}
 .nft img {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
 }
 
+@media (max-width: 1250px) {
+  .nft {
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 25px;
+    border:0.2px solid #e7eaf0;
+    transition: 0.4s linear;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    max-width: auto;
+  }
+  .nft_details{
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  .nft img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .nft {
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 25px;
+    border:0.2px solid #e7eaf0;
+    transition: 0.4s linear;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+  }
+  .nft_details{
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  .nft img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+  }
+  .nft_dates{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 780px) {
+  .nft {
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 25px;
+    border:0.2px solid #e7eaf0;
+    transition: 0.4s linear;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+  }
+  .nft_details{
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  .nft img {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+  }
+  .nft_dates{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .nft {
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 25px;
+    border:0.2px solid #e7eaf0;
+    transition: 0.4s linear;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+  }
+  .nft_details{
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .nft img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+  }
+  .nft_dates{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .nfts_grids{
+    display: grid;
+    grid-template-columns: 1fr;
+  
+  }
+}
 .author img {
   width: 40px;
   height: 40px;
@@ -349,7 +492,7 @@
   font-size: 18px;
   color: #161622;
   font-weight: 600;
-  margin: 12px 0;
+  margin-top: 0px;
 }
 
 .author {
@@ -358,7 +501,7 @@
 
 .price {
   background: rgba(124, 248, 136, 0.346);
-  padding: 12px 15px;
+  padding: 5px 15px;
   border-radius: 6px;
   cursor: pointer;
   color: #38c947;
@@ -702,7 +845,7 @@
 
   .topbar {
     flex-direction: row-reverse;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -1007,8 +1150,16 @@ ul{
   width: 95%;
   margin: auto;
   margin-top: 30px;
+  padding-top: 15px;
   background-color: #ffff;
   border:0.2px solid #e7eaf0;
+}
+.mynft_container h2{
+  font-size: 28px;
+  font-weight: 800;
+  color: #6d72ff;
+  font-family: sans-serif;
+  margin-left: 40px;
 }
 .mynft_container>div{
   width: 100%;
